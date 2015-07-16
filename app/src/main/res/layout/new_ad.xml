@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dddddd"
+    >
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/rounded_corners_background"
+    android:padding="10dp"
+    android:layout_margin="5dp"
+    >
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:padding="5dp"
+        android:background="@drawable/edit_text_design"
+        android:textColor="#4b4b4b"
+        android:hint="Ad title"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:maxLength="40"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#4b4b4b"
+        android:background="@drawable/edit_text_design"
+
+        android:inputType="textMultiLine"
+        android:lines="4"
+        android:gravity="top"
+
+        android:padding="5dp"
+        android:hint="Ad description"
+        android:ems="10"
+        android:id="@+id/description"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <RadioGroup
+        android:id="@+id/category"
+        android:layout_marginTop="20dp"
+        android:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/description"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+
+    <RadioButton
+        android:id="@+id/radio1"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Electronics"
+        android:textColor="#ffffff"
+        android:checked="true"
+        android:layout_alignTop="@+id/category"
+         />
+
+    <RadioButton
+        android:id="@+id/radio2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:text="Study Materials"
+        android:layout_below="@+id/radio1"
+        />
+
+    <RadioButton
+        android:id="@+id/radio3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:text="Other Things"
+        android:layout_below="@+id/radio2"
+        android:layout_alignRight="@+id/radio2"
+        android:layout_alignEnd="@+id/radio2" />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#ffffff"
+        android:text="Add An Image"
+        android:id="@+id/ImageAttachText"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/category"
+        android:layout_toRightOf="@+id/imageAttach"
+        />
+
+    <Button
+        android:background="@drawable/ic_action_new_attachment"
+        android:textColor="#494949"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+
+        android:layout_marginTop="15dp"
+        android:id="@+id/imageAttach"
+        android:layout_below="@+id/category"
+        android:layout_alignParentLeft="true"
+        android:onClick="UploadImage" />
+
+
+
+
+    <Button
+        android:background="@drawable/button_style"
+        android:textColor="#494949"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="SUBMIT"
+        android:layout_marginTop="20dp"
+        android:id="@+id/submit"
+        android:layout_below="@+id/imageAttach"
+        android:layout_centerHorizontal="true"
+        android:onClick="DataSubmit" />
+
+
+
+</RelativeLayout>
+
+    </ScrollView>
