@@ -14,6 +14,10 @@ This is a college classifieds android app. This app is meant to provide students
 5. Android Action Button
 <br>
 
+<b>Screenshots</b>
+
+<br>
+
 1. <br>
 ![Screenshot 1](https://github.com/Asutosh11/CollegeClassifieds/blob/master/Screenshots/1.png "")
 
