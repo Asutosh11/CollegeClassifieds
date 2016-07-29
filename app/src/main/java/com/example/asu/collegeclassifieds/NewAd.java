@@ -35,22 +35,19 @@ import java.io.OutputStream;
 
 public class NewAd extends AppCompatActivity {
 
-    EditText title;
-    EditText description;
-
-    Button imageAttach;
-    Button submit;
-
-    String titleText;
-    String descriptionText;
-
-    RadioGroup category;
-    int RadioSelectedId;
-    RadioButton selectedRadioButton;
-    String categoryText;
-    ParseObject entry;
-    boolean imageUloaded;
-    String timestamp;
+    private EditText title;
+    private EditText description;
+    private Button imageAttach;
+    private Button submit;
+    private String titleText;
+    private String descriptionText;
+    private RadioGroup category;
+    private int RadioSelectedId;
+    private RadioButton selectedRadioButton;
+    private String categoryText;
+    private ParseObject entry;
+    private boolean imageUloaded;
+    private String timestamp;
 
 
     @Override
