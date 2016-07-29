@@ -48,12 +48,9 @@ public class NewAd extends AppCompatActivity {
     int RadioSelectedId;
     RadioButton selectedRadioButton;
     String categoryText;
-
     ParseObject entry;
-
-    static boolean imageUloaded;
-
-    static String timestamp;
+    boolean imageUloaded;
+    String timestamp;
 
 
     @Override
@@ -83,17 +80,10 @@ public class NewAd extends AppCompatActivity {
 
 
 
-
-
-
-
     public String GetTitle(){
         titleText = title.getText().toString();
         return  titleText;
     }
-
-
-
 
 
 
@@ -175,7 +165,6 @@ public class NewAd extends AppCompatActivity {
             // Create the ParseFile
             ParseFile file = new ParseFile(timestamp+"-"+tit+".jpg", image);
 
-            //-------------------------------------------------------------------
 
             String PATH = "/data/data/com.example.asu.collegeclassifieds/";
             OutputStream fOut = null;
@@ -206,8 +195,6 @@ public class NewAd extends AppCompatActivity {
                 e.printStackTrace();
             }
 
-
-            //----------------------------------------------------------------------
 
             // Create a column named "ImageFile" and insert the image
             entry.put("ImageFile", file);
