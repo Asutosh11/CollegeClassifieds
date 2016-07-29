@@ -44,30 +44,16 @@ public class ClassifiedsListingFragment extends Fragment {
     ListView listView;
     SimpleAdapter adapter;
     List<ParseObject> ob;
-
-    public String[] titlesFromDB =  new String[500];
-
-    public String[] descFromDB =  new String[500];
-
-
-    public String[] titlesPassedValues =  new String[500];
-
-    public String[] descPassedValues =  new String[500];
-
-
-    public String[] getTimestamp =  new String[500];
-
-    public String[] TimestampPassed =  new String[500];
-
-
-    public int[] categoryFromDBcheck =  new int[500];
-
-    public int[] getCategoryCheck =  new int[500];
-
+    String[] titlesFromDB =  new String[500];
+    String[] descFromDB =  new String[500];
+    String[] titlesPassedValues =  new String[500];
+    String[] descPassedValues =  new String[500];
+    String[] getTimestamp =  new String[500];
+    String[] TimestampPassed =  new String[500];
+    int[] categoryFromDBcheck =  new int[500];
+    int[] getCategoryCheck =  new int[500];
     String PATH;
-
     int noOfRows = 0;
-
     SharedPreferences sharedPref;
 
 
@@ -90,7 +76,6 @@ public class ClassifiedsListingFragment extends Fragment {
 
 
         // ListView code starts here.
-        // Each row in the list stores country name, currency and flag
         List<HashMap<String,String>> aList = new ArrayList<HashMap<String,String>>();
 
         for(int i=0;i<noOfRows;i++){
