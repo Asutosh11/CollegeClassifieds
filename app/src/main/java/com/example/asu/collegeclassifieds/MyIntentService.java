@@ -32,19 +32,17 @@ public class MyIntentService extends IntentService {
 
     }
 
-    List<ParseObject> ob;
-
-    ParseFile[] imagesFromDB =  new ParseFile[500];
-    String[] ParseDBurl =  new String[500];
-
-    String fileName;
-    URL url;
-    URLConnection ucon;
-    InputStream is;
-    BufferedInputStream bis;
-    FileOutputStream fos;
-    String PATH;
-    String Fname;
+    private List<ParseObject> ob;
+    private ParseFile[] imagesFromDB =  new ParseFile[500];
+    private String[] ParseDBurl =  new String[500];
+    private String fileName;
+    private URL url;
+    private URLConnection ucon;
+    private InputStream is;
+    private BufferedInputStream bis;
+    private FileOutputStream fos;
+    private String PATH;
+    private String Fname;
 
 
     @Override
