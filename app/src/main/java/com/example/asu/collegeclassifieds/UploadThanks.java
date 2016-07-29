@@ -6,9 +6,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-/**
- * Created by asu on 25-06-2015.
- */
+
 public class UploadThanks extends AppCompatActivity {
 
     @Override
