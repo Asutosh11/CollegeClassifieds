@@ -34,9 +34,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.List;
 
-/**
- * Created by asu on 14-06-2015.
- */
+
 public class ImageDownloadFromParseDB extends Activity{
 
 
