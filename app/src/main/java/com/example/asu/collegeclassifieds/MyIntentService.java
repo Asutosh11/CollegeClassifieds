@@ -34,8 +34,8 @@ public class MyIntentService extends IntentService {
 
     List<ParseObject> ob;
 
-    public ParseFile[] imagesFromDB =  new ParseFile[500];
-    public String[] ParseDBurl =  new String[500];
+    ParseFile[] imagesFromDB =  new ParseFile[500];
+    String[] ParseDBurl =  new String[500];
 
     String fileName;
     URL url;
@@ -43,11 +43,8 @@ public class MyIntentService extends IntentService {
     InputStream is;
     BufferedInputStream bis;
     FileOutputStream fos;
-
     String PATH;
-
     String Fname;
-
 
 
     @Override
@@ -64,38 +61,26 @@ public class MyIntentService extends IntentService {
 
         try {
 
-
-
             URL url = new URL(ImageLinkString);
-
             PATH = "/data/data/com.example.asu.collegeclassifieds/";
-
             File file = new File(PATH+fileName);
-
-
-
 
             long startTime = System.currentTimeMillis();
             Log.d("ImageManager", "download begining");
             Log.d("ImageManager", "download url:" + url);
             Log.d("ImageManager", "downloaded file name:" + fileName);
-                        /* Open a connection to that URL. */
+                      
             URLConnection ucon = url.openConnection();
-                        /*
-                         * Define InputStreams to read from the URLConnection.
-                         */
+                        
             InputStream is = ucon.getInputStream();
             BufferedInputStream bis = new BufferedInputStream(is);
-                        /*
-                         * Read bytes to the Buffer until there is nothing more to read(-1).
-                         */
+                        
             ByteArrayBuffer baf = new ByteArrayBuffer(50);
             int current = 0;
             while ((current = bis.read()) != -1) {
                 baf.append((byte) current);
             }
 
-                        /* Convert the Bytes read to a String. */
             FileOutputStream fos = new FileOutputStream(file);
 
             fos.write(baf.toByteArray());
@@ -135,13 +120,7 @@ public class MyIntentService extends IntentService {
             String tit = (String)images.get("AdTitle");
             String timestamp = (String)images.get("Timestamp");
 
-            // imp... see why commenting this out makes the app error free
-            //ParseDBurl[i] = imagesFromDB[i].getUrl();
-
-
-
             // Its getting image URLS and getting saved in variable 'url' successfully.
-
 
             try {
                 url = new URL(ParseDBurl[i]);
@@ -168,18 +147,6 @@ public class MyIntentService extends IntentService {
             i++;
         }
 
-
-        /*
-
-        SharedPreferences sharedPref = getSharedPreferences("statusInfo", Context.MODE_PRIVATE);
-
-        SharedPreferences.Editor editor = sharedPref.edit();
-
-        editor.putString("status", "over");
-
-        editor.apply();
-
-        */
 
         Intent dialogIntent = new Intent(this, MainActivity.class);
         dialogIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
