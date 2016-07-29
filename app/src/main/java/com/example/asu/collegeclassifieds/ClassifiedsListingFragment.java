@@ -41,20 +41,20 @@ import java.util.List;
 
 public class ClassifiedsListingFragment extends Fragment {
 
-    ListView listView;
-    SimpleAdapter adapter;
-    List<ParseObject> ob;
-    String[] titlesFromDB =  new String[500];
-    String[] descFromDB =  new String[500];
-    String[] titlesPassedValues =  new String[500];
-    String[] descPassedValues =  new String[500];
-    String[] getTimestamp =  new String[500];
-    String[] TimestampPassed =  new String[500];
-    int[] categoryFromDBcheck =  new int[500];
-    int[] getCategoryCheck =  new int[500];
-    String PATH;
-    int noOfRows = 0;
-    SharedPreferences sharedPref;
+    private ListView listView;
+    private SimpleAdapter adapter;
+    private List<ParseObject> ob;
+    private String[] titlesFromDB =  new String[500];
+    private String[] descFromDB =  new String[500];
+    private String[] titlesPassedValues =  new String[500];
+    private String[] descPassedValues =  new String[500];
+    private String[] getTimestamp =  new String[500];
+    private String[] TimestampPassed =  new String[500];
+    private int[] categoryFromDBcheck =  new int[500];
+    private int[] getCategoryCheck =  new int[500];
+    private String PATH;
+    private int noOfRows = 0;
+    private SharedPreferences sharedPref;
 
 
     @Override
